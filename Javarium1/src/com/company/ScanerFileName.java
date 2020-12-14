@@ -4,7 +4,7 @@ import java.io.*;
 
 public class ScanerFileName {
 
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); //
     String inputFileName;
 
     {
@@ -19,9 +19,9 @@ public class ScanerFileName {
         try {
 
             InputStream is = new FileInputStream(inputFileName);
-//            while (is.available() > 0) {
-//                System.out.print((char) is.read());// напишите тут ваш код
-//            }
+           while (is.available() > 0) {
+               System.out.print((char) is.read());// напишите тут ваш код
+            }
             System.out.println(getFileExtension(inputFileName));
             is.close();
             reader.close();
@@ -29,7 +29,7 @@ public class ScanerFileName {
         } catch (FileNotFoundException e) {
             System.out.println("Такого файла еще не существует!Мы создаем его");
             File yourFile = new File(inputFileName);
-            yourFile.createNewFile(); // if file already exists will do nothing
+            yourFile.createNewFile();
             System.out.println(getFileExtension(inputFileName));
             FileOutputStream oFile = new FileOutputStream(inputFileName, false);
 
