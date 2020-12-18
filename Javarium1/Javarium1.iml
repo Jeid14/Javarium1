@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.6" level="project" />
     <orderEntry type="library" exported="" name="com.buschmais.xo:xo.json:0.8.1" level="project" />
+    <orderEntry type="library" exported="" name="au.com.bytecode:opencsv:2.4" level="project" />
   </component>
 </module>
