@@ -36,6 +36,11 @@ public class ScanerFileName {
         }
 
     }
+    public String getInputFileName(){
+        this.inputFileName = inputFileName;
+        return inputFileName;
+
+    }
     public   String getFileExtension(String inputFileName) {
         // если в имени файла есть точка и она не является первым символом в названии файла
         if(inputFileName.lastIndexOf(".") != -1 && inputFileName.lastIndexOf(".") != 0)

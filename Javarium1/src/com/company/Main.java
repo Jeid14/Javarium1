@@ -15,13 +15,9 @@ public class Main extends Object {
     JsonExecutor jsonExecutor = new JsonExecutor();
          //
         Person person = new Person(11,"3ddd","a22a",12,"f2");
-        try {
-            jsonExecutor.write(person);
-        } catch (IOException e) {
-            e.printStackTrace();
+
         }
 
-    }
 
 
 

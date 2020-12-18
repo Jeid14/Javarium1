@@ -2,19 +2,32 @@ package Executor;
 
 import com.company.ConvertStringToFormat.PersonConverterJson;
 import com.company.Person;
+import com.company.ScanerFileName;
 
 import java.io.*;
 import java.util.ArrayList;
 
 public class JsonExecutor implements Executable {
-    PersonConverterJson personConverterJson = new PersonConverterJson();
+    ScanerFileName scanerFileName = new ScanerFileName();
 
+
+    PersonConverterJson personConverterJson = new PersonConverterJson();
+    BufferedWriter writer;
+
+    {
+        try {
+            writer = new BufferedWriter(new FileWriter(scanerFileName.getInputFileName()));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     @Override
     public void write(Person person) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter("1.json"));
-        writer.write(personConverterJson.convertPersonToStr(person));
+        writer.append(' ');
+        writer.append(personConverterJson.convertPersonToStr(person));
 
 
     }
