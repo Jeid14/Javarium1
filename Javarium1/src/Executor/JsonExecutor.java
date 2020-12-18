@@ -1,22 +1,37 @@
 package Executor;
 
+import com.company.ConvertStringToFormat.PersonConverterJson;
 import com.company.Person;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
-import java.util.List;
+import java.io.*;
+import java.util.ArrayList;
 
 public class JsonExecutor implements Executable {
+    PersonConverterJson personConverterJson = new PersonConverterJson();
+
+
+
     @Override
-    public void write(Person person) {
-        GsonBuilder builder = new GsonBuilder();
-        Gson gson = builder.create();
-        System.out.println(gson.toJson(person));
+    public void write(Person person) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter("1.json"));
+        writer.write(personConverterJson.convertPersonToStr(person));
+
+
     }
 
     @Override
-    public List<Person> read() {
-        return null;
+    public ArrayList<Person> read() throws IOException {
+        ArrayList<Person> result = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader("1.json"))) {
+            while (br.ready()) {
+                Person person = new Person(br.read(),br.readLine(),br.readLine(),br.read(),br.readLine());
+                result.add(person);
+            }
+        }
+
+
+        return result;
     }
 
     @Override

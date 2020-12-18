@@ -14,7 +14,7 @@ public class BinaryExecutor implements Executable {
     }
 
     @Override
-    public List<Person> read() {
+    public ArrayList<Person> read() {
         List<Person> personList = new ArrayList<>();
         try {
             FileInputStream is = new FileInputStream("path...");
@@ -22,7 +22,7 @@ public class BinaryExecutor implements Executable {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        return personList;
+        return null;
     }
 
     @Override

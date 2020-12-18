@@ -2,6 +2,8 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
 // POJO classes
 public class Person {
 
@@ -20,6 +22,11 @@ public class Person {
         this.age = age;
         this.city = city;
     }
+public List<Person> createListPerson(Person person){
+        List<Person> listPerson = new ArrayList<>();
+        listPerson.add(person);
+        return listPerson;
+}
 
     public String toString() {
 
