@@ -11,9 +11,7 @@ public class Person {
     private int age;
     private String city;
 
-    public Person() {
 
-    }
 
     public Person(int id, String firstName, String lastName, int age, String city) {
         this.id = id;
@@ -24,6 +22,7 @@ public class Person {
     }
 
     public String toString() {
+
         return firstName;
     }
 }

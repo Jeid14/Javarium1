@@ -17,7 +17,10 @@ public class Main extends Object {
     private Executable executor;
 
     public static void main(String[] args) {
-        start();
+
+        JsonExecutor jsonExecutor = new JsonExecutor();
+        Person person = new Person(1,"ddd","aa",12,"ff");
+
     }
 
 

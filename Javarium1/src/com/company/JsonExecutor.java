@@ -2,6 +2,7 @@ package com.company;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonWriter;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.util.List;
@@ -11,7 +12,7 @@ public class JsonExecutor implements Executable {
     public void write(Person person) {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
-        gson.toJson(person); // src/resources/data.json
+        System.out.println(gson.toJson(person));
     }
 
     @Override
