@@ -1,9 +1,8 @@
-package com.company;
+package Executor;
 
+import com.company.Person;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.stream.JsonWriter;
-import org.codehaus.jackson.map.ObjectMapper;
 
 import java.util.List;
 

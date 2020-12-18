@@ -1,17 +1,8 @@
 package com.company;
 
 
-import com.google.gson.*;
-import com.sun.corba.se.spi.orbutil.threadpool.Work;
-import jdk.nashorn.internal.parser.JSONParser;
-import sun.rmi.runtime.Log;
-
-
-import java.io.*;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
+import Executor.Executable;
+import Executor.JsonExecutor;
 
 public class Main extends Object {
     private Executable executor;

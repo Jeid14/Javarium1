@@ -1,4 +1,6 @@
-package com.company;
+package Executor;
+
+import com.company.Person;
 
 import java.io.IOException;
 import java.util.List;
