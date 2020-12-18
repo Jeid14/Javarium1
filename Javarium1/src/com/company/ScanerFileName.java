@@ -19,9 +19,9 @@ public class ScanerFileName {
         try {
 
             InputStream is = new FileInputStream(inputFileName);
-           while (is.available() > 0) {
-               System.out.print((char) is.read());// напишите тут ваш код
-            }
+//           while (is.available() > 0) {
+//               System.out.print((char) is.read());// напишите тут ваш код
+//            }
             System.out.println(getFileExtension(inputFileName));
             is.close();
             reader.close();
@@ -43,6 +43,19 @@ public class ScanerFileName {
             return inputFileName.substring(inputFileName.lastIndexOf(".")+1);
             // в противном случае возвращаем заглушку, то есть расширение не найдено
         else return "";
+    }
+    public void choiseWay(String getFileExtension){
+        switch (getFileExtension){
+            case  "YAML": System.out.println("Работаем с ямл");break;
+            case  "json": System.out.println("Работаем с жсон");break;
+            case "XML":
+                System.out.println("Работаем с ХМЛ");break;
+            case "BINARY":
+                System.out.println("Работаем с бинари");
+            default:
+                System.out.println("Huina");
+
+        }
     }
 }
 

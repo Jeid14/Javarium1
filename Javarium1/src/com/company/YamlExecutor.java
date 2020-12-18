@@ -1,13 +1,10 @@
 package com.company;
 
-import au.com.bytecode.opencsv.*;
-
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
-public class CsvExecutor implements Executable{
-    String fileName = "C:\\Users\\l\\Desktop\\2.csv";
+public class YamlExecutor implements Executable{
+
     @Override
     public void write(Person person) {
 
@@ -16,9 +13,7 @@ public class CsvExecutor implements Executable{
     @Override
     public List<Person> read() throws IOException {
         return null;
-
-        }
-
+    }
 
     @Override
     public boolean update(Person person) {
