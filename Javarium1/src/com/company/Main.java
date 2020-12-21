@@ -2,8 +2,11 @@ package com.company;
 
 import java.io.File;
 import java.util.*;
+
+import Executor.BinaryExecutor;
 import Executor.Executable;
 import Executor.JsonExecutor;
+import com.company.ConvertStringToFormat.PersonConvertBinary;
 import com.company.ConvertStringToFormat.PersonConverterJson;
 import com.company.utils.FileHelper;
 
@@ -13,22 +16,26 @@ public class Main extends Object {
     private Executable executor;
 
     public static void main(String[] args) {
+        start();
         Person person1 = new Person(11,"3ddd","a22a",12,"f2");
         Person person2 = new Person(10,"ff","FF",133,"Kiev");
-
-        PersonConverterJson personConverterJson = new PersonConverterJson();
-    JsonExecutor jsonExecutor = new JsonExecutor();
+        BinaryExecutor binaryExecutor = new BinaryExecutor();
+//        PersonConverterJson personConverterJson = new PersonConverterJson();
+//    JsonExecutor jsonExecutor = new JsonExecutor();
     List<Person> personList = new ArrayList<>();
     personList.add(person1);
     personList.add(person2);
-    jsonExecutor.write(personList);
+   // binaryExecutor.write(personList);
 
-        try {
-            System.out.println(jsonExecutor.read());
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//    jsonExecutor.write(personList);
+
+//        try {
+//            System.out.println(jsonExecutor.read());
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
 
     }

@@ -23,9 +23,7 @@ public class Person {
         this.city = city;
     }
 
-
     public String toString() {
-
-        return firstName;
+        return firstName +"  "+ lastName;
     }
 }
