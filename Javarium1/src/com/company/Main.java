@@ -1,6 +1,6 @@
 package com.company;
 
-
+import java.util.*;
 import Executor.Executable;
 import Executor.JsonExecutor;
 import com.company.ConvertStringToFormat.PersonConverterJson;
@@ -11,10 +11,13 @@ public class Main extends Object {
     private Executable executor;
 
     public static void main(String[] args) {
+        Person person1 = new Person(11,"3ddd","a22a",12,"f2");
         PersonConverterJson personConverterJson = new PersonConverterJson();
     JsonExecutor jsonExecutor = new JsonExecutor();
-         //
-        Person person = new Person(11,"3ddd","a22a",12,"f2");
+    jsonExecutor.write(person1);
+
+
+
 
         }
 

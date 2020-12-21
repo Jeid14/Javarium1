@@ -1,20 +1,20 @@
 package Executor;
 
 import com.company.Person;
-
+import com.company.utils.FileHelper;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class XmlExecutor implements Executable {
+public class StringFormatExecutor implements Executable{
+
     @Override
     public void write(Person person) {
 
     }
 
-
     @Override
-    public ArrayList<Person> read() throws IOException {
+    public ArrayList<Person> read() {
         return null;
     }
 
