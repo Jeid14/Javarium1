@@ -14,7 +14,7 @@ public class BinaryExecutor implements Executable {
     }
 
     @Override
-    public ArrayList<Person> read() {
+    public List<Person> read() {
         List<Person> personList = new ArrayList<>();
         try {
             FileInputStream is = new FileInputStream("path...");

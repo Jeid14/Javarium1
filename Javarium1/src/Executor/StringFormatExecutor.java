@@ -1,10 +1,8 @@
 package Executor;
 
 import com.company.Person;
-import com.company.utils.FileHelper;
 
-import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 public class StringFormatExecutor implements Executable{
 
@@ -14,7 +12,7 @@ public class StringFormatExecutor implements Executable{
     }
 
     @Override
-    public ArrayList<Person> read() {
+    public List<Person> read() {
         return null;
     }
 

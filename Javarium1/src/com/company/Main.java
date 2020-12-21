@@ -1,9 +1,11 @@
 package com.company;
 
+import java.io.File;
 import java.util.*;
 import Executor.Executable;
 import Executor.JsonExecutor;
 import com.company.ConvertStringToFormat.PersonConverterJson;
+import com.company.utils.FileHelper;
 
 import java.io.IOException;
 
@@ -12,14 +14,18 @@ public class Main extends Object {
 
     public static void main(String[] args) {
         Person person1 = new Person(11,"3ddd","a22a",12,"f2");
+        Person person2 = new Person(10,"ff","FF",133,"Kiev");
         PersonConverterJson personConverterJson = new PersonConverterJson();
     JsonExecutor jsonExecutor = new JsonExecutor();
-    jsonExecutor.write(person1);
+        try {
+            System.out.println(jsonExecutor.read());
 
-
-
-
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+
+    }
 
 
 

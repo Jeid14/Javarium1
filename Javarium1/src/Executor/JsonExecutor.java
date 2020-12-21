@@ -2,12 +2,12 @@ package Executor;
 
 import com.company.ConvertStringToFormat.PersonConverterJson;
 import com.company.Person;
-import com.company.stringformat.IPersonConvertor;
 import com.company.ScanerFileName;
 import com.company.utils.FileHelper;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class JsonExecutor implements Executable{
     FileHelper fileHelper = new FileHelper();
@@ -26,10 +26,9 @@ public class JsonExecutor implements Executable{
     }
 
     @Override
-    public ArrayList<Person> read() throws IOException {
-
-
-        return null;
+    public List<Person> read() throws IOException {
+        List<Person> list = new ArrayList<>();
+        return person.createListPerson(person);
     }
 
     @Override

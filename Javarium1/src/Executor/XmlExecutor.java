@@ -4,7 +4,7 @@ import com.company.Person;
 
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 public class XmlExecutor implements Executable {
     @Override
@@ -14,7 +14,7 @@ public class XmlExecutor implements Executable {
 
 
     @Override
-    public ArrayList<Person> read() throws IOException {
+    public List<Person> read() throws IOException {
         return null;
     }
 
