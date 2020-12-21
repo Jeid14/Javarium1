@@ -8,7 +8,7 @@ import java.util.List;
 public class CsvExecutor implements Executable {
     String fileName = "C:\\Users\\l\\Desktop\\2.csv";
     @Override
-    public void write(Person person) {
+    public void write(List<Person> personList) {
 
     }
 

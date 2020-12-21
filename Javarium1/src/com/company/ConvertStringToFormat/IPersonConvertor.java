@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface IPersonConvertor {
 
-    String convertPersonToStr(Person person);
+    String convertPersonToStr(List<Person> personList);
     List<Person> convertStrToPerson(String personStr);
 }

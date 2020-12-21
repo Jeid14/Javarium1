@@ -15,11 +15,11 @@ public class JsonExecutor implements Executable{
     PersonConverterJson personConverterJson = new PersonConverterJson();
     String fileName = scanerFileName.getInputFileName();
     @Override
-    public void write(Person person)  {
+    public void write(List<Person> personList)  {
         try {
-            fileHelper.saveToFile(personConverterJson.convertPersonToStr(person),fileName);
+            fileHelper.saveToFile(personConverterJson.convertPersonToStr(personList),fileName);
         } catch (IOException e) {
-            System.out.println("shit");
+            System.out.println("");
         }
 
 
@@ -27,8 +27,7 @@ public class JsonExecutor implements Executable{
 
     @Override
     public List<Person> read() throws IOException {
-        List<Person> list = new ArrayList<>();
-        return person.createListPerson(person);
+        return personConverterJson.convertStrToPerson(fileHelper.readFromFile(fileName));
     }
 
     @Override

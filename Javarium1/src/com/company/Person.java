@@ -22,11 +22,7 @@ public class Person {
         this.age = age;
         this.city = city;
     }
-public List<Person> createListPerson(Person person){
-        List<Person> listPerson = new ArrayList<>();
-        listPerson.add(person);
-        return listPerson;
-}
+
 
     public String toString() {
 

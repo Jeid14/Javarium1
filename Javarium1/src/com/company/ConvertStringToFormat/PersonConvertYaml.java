@@ -6,7 +6,7 @@ import java.util.List;
 
 public class PersonConvertYaml implements com.company.stringformat.IPersonConvertor {
     @Override
-    public String convertPersonToStr(Person person) {
+    public String convertPersonToStr(List<Person> personList) {
         return null;
     }
 

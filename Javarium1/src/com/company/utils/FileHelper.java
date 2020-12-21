@@ -1,5 +1,7 @@
 package com.company.utils;
 
+import javafx.beans.binding.StringBinding;
+
 import java.io.*;
 
 public class FileHelper {
@@ -8,24 +10,24 @@ public class FileHelper {
     public void saveToFile(String content, String fileName) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
         writer.write(content);
-        writer.append('\n');
         writer.close();
 
     }
 
     public String readFromFile(String fileName) throws IOException {
-        String line = " ";
+        StringBuilder outputString = new StringBuilder();
+
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line;
 
             while ((line = reader.readLine()) != null) {
-                 line = line + "\n";
-                return line;
+                 outputString.append(line);
+
             }
         }
         catch (IOException e) {
             e.printStackTrace();
         }
-
-        return line;
+        return outputString.toString();
     }
 }

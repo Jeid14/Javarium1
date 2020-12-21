@@ -15,8 +15,14 @@ public class Main extends Object {
     public static void main(String[] args) {
         Person person1 = new Person(11,"3ddd","a22a",12,"f2");
         Person person2 = new Person(10,"ff","FF",133,"Kiev");
+
         PersonConverterJson personConverterJson = new PersonConverterJson();
     JsonExecutor jsonExecutor = new JsonExecutor();
+    List<Person> personList = new ArrayList<>();
+    personList.add(person1);
+    personList.add(person2);
+    jsonExecutor.write(personList);
+
         try {
             System.out.println(jsonExecutor.read());
 

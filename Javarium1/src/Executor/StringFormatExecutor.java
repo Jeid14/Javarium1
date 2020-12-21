@@ -7,7 +7,7 @@ import java.util.List;
 public class StringFormatExecutor implements Executable{
 
     @Override
-    public void write(Person person) {
+    public void write(List<Person> personList) {
 
     }
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class BinaryExecutor implements Executable {
     @Override
-    public void write(Person person) {
+    public void write(List<Person> personList) {
         FileOutputStream os = null;
 
     }

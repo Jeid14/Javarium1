@@ -7,7 +7,7 @@ import java.util.List;
 
 
 public interface Executable {
-    void write(Person person);
+    void write(List<Person> personList);
 
     List<Person> read() throws IOException;
     boolean update(Person person);
