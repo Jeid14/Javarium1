@@ -16,16 +16,19 @@ public class Main extends Object {
     private Executable executor;
 
     public static void main(String[] args) {
-        start();
         Person person1 = new Person(11,"3ddd","a22a",12,"f2");
         Person person2 = new Person(10,"ff","FF",133,"Kiev");
+        Person person3 = new Person(110,"f11f","FF22",03,"XZ");
         BinaryExecutor binaryExecutor = new BinaryExecutor();
 //        PersonConverterJson personConverterJson = new PersonConverterJson();
 //    JsonExecutor jsonExecutor = new JsonExecutor();
     List<Person> personList = new ArrayList<>();
     personList.add(person1);
     personList.add(person2);
-   // binaryExecutor.write(personList);
+    personList.add(person3);
+
+   //binaryExecutor.write(personList);
+        binaryExecutor.read();
 
 
 //    jsonExecutor.write(personList);

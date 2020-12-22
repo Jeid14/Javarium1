@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class PersonConvertBinary implements com.company.stringformat.IPersonConvertor {
-    @Override
+public class PersonConvertBinary  {
+
     public String convertPersonToStr(List<Person> personList) {
         byte[] bytes = String.valueOf(personList).getBytes();
         StringBuilder binary = new StringBuilder();
@@ -27,9 +27,7 @@ public class PersonConvertBinary implements com.company.stringformat.IPersonConv
         return String.valueOf(binary);
     }
 
-    @Override
-    public List<Person> convertStrToPerson(String personStr) {
-        List<Person> personList = new ArrayList<>();
+    public String convertStrToPerson(String personStr) {
         String s = " ";
         for (int index = 0; index < personStr.length(); index += 9) {
             String temp = personStr.substring(index, index + 8);
@@ -38,6 +36,6 @@ public class PersonConvertBinary implements com.company.stringformat.IPersonConv
             s = s + letter;
         }
 
-        return null;
+        return s;
     }
 }

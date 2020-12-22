@@ -10,12 +10,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryExecutor implements Executable {
+public class BinaryExecutor  {
     FileHelper fileHelper = new FileHelper();
     ScanerFileName scanerFileName = new ScanerFileName();
     String fileName = scanerFileName.getInputFileName();
     PersonConvertBinary personConvertBinary =new PersonConvertBinary();
-    @Override
+
     public void write(List<Person> personList) {
         try {
             fileHelper.saveToFile(personConvertBinary.convertPersonToStr(personList),fileName);
@@ -25,18 +25,23 @@ public class BinaryExecutor implements Executable {
 
     }
 
-    @Override
-    public List<Person> read() {
 
-        return null;
+    public void read() {
+        try {
+            System.out.println( personConvertBinary.convertStrToPerson(fileHelper.readFromFile(fileName)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
-    @Override
+
     public boolean update(Person person) {
         return false;
     }
 
-    @Override
+
     public boolean delete(int id) {
         return false;
     }
