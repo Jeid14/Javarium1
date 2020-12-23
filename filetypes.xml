@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping ext="rar" type="CLASS" />
       <mapping pattern="class Person {" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
