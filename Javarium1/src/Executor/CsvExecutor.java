@@ -20,7 +20,7 @@ public class CsvExecutor implements Executable {
 
 
     @Override
-    public boolean update(Person person) {
+    public boolean update(List<Person> person) {
         return false;
     }
 

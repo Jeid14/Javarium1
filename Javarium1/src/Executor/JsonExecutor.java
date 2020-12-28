@@ -31,10 +31,12 @@ public class JsonExecutor implements Executable{
     }
 
     @Override
-    public boolean update(Person person) {
-        if(person.getFirstName().equals("ff")){
-            System.out.println(person.toString());
+    public boolean update(List<Person> person) {
+        for(Person persons:person) {
+            if (persons.getFirstName().equals("ff")) {
+                System.out.println(person.toString());
 
+            }
         }
         return false;
     }
