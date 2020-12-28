@@ -32,6 +32,10 @@ public class JsonExecutor implements Executable{
 
     @Override
     public boolean update(Person person) {
+        if(person.getFirstName().equals("ff")){
+            System.out.println(person.toString());
+
+        }
         return false;
     }
 

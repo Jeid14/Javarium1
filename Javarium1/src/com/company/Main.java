@@ -21,14 +21,15 @@ public class Main extends Object {
         Person person3 = new Person(110,"f11f","FF22",03,"XZ");
         BinaryExecutor binaryExecutor = new BinaryExecutor();
 //        PersonConverterJson personConverterJson = new PersonConverterJson();
-//    JsonExecutor jsonExecutor = new JsonExecutor();
+    JsonExecutor jsonExecutor = new JsonExecutor();
     List<Person> personList = new ArrayList<>();
     personList.add(person1);
     personList.add(person2);
     personList.add(person3);
+    jsonExecutor.update(person2);
 
    //binaryExecutor.write(personList);
-        binaryExecutor.read();
+     //   binaryExecutor.read();
 
 
 //    jsonExecutor.write(personList);

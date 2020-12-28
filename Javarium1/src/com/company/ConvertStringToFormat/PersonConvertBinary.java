@@ -38,4 +38,5 @@ public class PersonConvertBinary  {
 
         return s;
     }
+
 }
