@@ -1,21 +1,11 @@
 package com.company;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.*;
 
-import Executor.BinaryExecutor;
-import Executor.Executable;
-import Executor.JsonExecutor;
-import Executor.XmlExecutor;
-import com.company.ConvertStringToFormat.PersonConvertBinary;
-import com.company.ConvertStringToFormat.PersonConvertToXML;
-import com.company.ConvertStringToFormat.PersonConverterJson;
+import com.company.executor.Executable;
+import com.company.converterstr.PersonConvertToXML;
+import com.company.model.Person;
 import com.company.utils.FileHelper;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-import java.io.IOException;
 
 public class Main extends Object {
     private Executable executor;

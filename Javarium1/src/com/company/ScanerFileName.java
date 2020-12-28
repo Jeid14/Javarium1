@@ -37,7 +37,6 @@ public class ScanerFileName {
 
     }
     public  final String getInputFileName(){
-        this.inputFileName = inputFileName;
         return inputFileName;
 
     }

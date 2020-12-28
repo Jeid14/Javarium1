@@ -1,12 +1,9 @@
-package com.company.ConvertStringToFormat;
+package com.company.converterstr;
 
-import com.company.Person;
-import com.company.stringformat.IPersonConvertor;
+import com.company.model.Person;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 public class PersonConverterJson implements IPersonConvertor {
@@ -16,14 +13,11 @@ public class PersonConverterJson implements IPersonConvertor {
 
     @Override
     public String convertPersonToStr(List<Person> personList) {
-        String str = gson.toJson(personList);
-        return  str;
+        return gson.toJson(personList);
     }
 
     @Override
     public List<Person> convertStrToPerson(String personStr) {
-        List<Person> list = new ArrayList<>();
-        list.add(gson.fromJson(personStr, type));
-        return list ;
+        return gson.fromJson(personStr, type);
     }
 }

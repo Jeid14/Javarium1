@@ -1,10 +1,10 @@
-package com.company.ConvertStringToFormat;
+package com.company.converterstr;
 
-import com.company.Person;
+import com.company.model.Person;
 
 import java.util.List;
 
-public class PersonConvertYaml implements com.company.stringformat.IPersonConvertor {
+public class PersonConvertYaml implements IPersonConvertor {
     @Override
     public String convertPersonToStr(List<Person> personList) {
         return null;

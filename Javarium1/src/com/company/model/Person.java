@@ -1,11 +1,12 @@
-package com.company;
+package com.company.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 // POJO classes
-public class Person {
+public class Person implements Serializable {
 
     private int id;
     private String firstName;
@@ -22,27 +23,34 @@ public class Person {
         this.city = city;
     }
 
-    public String toString() {
-        return firstName + "  " + lastName;
+    public int getId() {
+        return id;
     }
 
     public String getFirstName() {
-        return this.firstName;
+        return firstName;
     }
 
     public String getLastName() {
-        return this.lastName;
-    }
-
-    public int getId() {
-        return this.id;
+        return lastName;
     }
 
     public int getAge() {
-        return this.age;
+        return age;
     }
 
     public String getCity() {
-        return this.city;
+        return city;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", city='" + city + '\'' +
+                '}';
     }
 }

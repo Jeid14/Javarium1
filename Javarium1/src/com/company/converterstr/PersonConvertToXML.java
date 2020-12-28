@@ -1,17 +1,16 @@
-package com.company.ConvertStringToFormat;
+package com.company.converterstr;
 
-import com.company.Person;
+import com.company.model.Person;
 
 import javax.xml.bind.JAXB;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonConvertToXML implements com.company.stringformat.IPersonConvertor {
+public class PersonConvertToXML implements IPersonConvertor {
 
 
     @Override
