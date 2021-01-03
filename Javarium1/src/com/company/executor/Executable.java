@@ -8,7 +8,10 @@ import java.util.List;
 
 public interface Executable {
     void write(String fileName, List<Person> personList) throws IOException;
+
     List<Person> read(String fileName) throws IOException;
-    boolean update(String fileName, List<Person> person);
-    boolean delete(String fileName, int id);
+
+    void update(String fileName, List<Person> person) throws IOException;
+
+    void delete(String fileName);
 }

@@ -1,8 +1,10 @@
 package com.company.utils;
 
+import com.company.model.Person;
 import javafx.beans.binding.StringBinding;
 
 import java.io.*;
+import java.util.List;
 
 public class FileHelper {
 
@@ -21,13 +23,29 @@ public class FileHelper {
             String line;
 
             while ((line = reader.readLine()) != null) {
-                 outputString.append(line);
+                outputString.append(line);
 
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return outputString.toString();
+    }
+
+    public void updateFile(String content, String fileName) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
+        writer.write(content);
+        writer.close();
+
+    }
+
+    public void deleteFromFile(List<Person> personList, int id, String fileName,String content) throws IOException {
+        for (Person person : personList) {
+            if (person.getId() == id) {
+                personList.remove(person);
+                updateFile(content,fileName);
+            }
+        }
+
     }
 }

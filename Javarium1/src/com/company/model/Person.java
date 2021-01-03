@@ -1,5 +1,8 @@
 package com.company.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,6 +12,7 @@ import java.util.List;
 public class Person implements Serializable {
 
     private int id;
+
     private String firstName;
     private String lastName;
     private int age;

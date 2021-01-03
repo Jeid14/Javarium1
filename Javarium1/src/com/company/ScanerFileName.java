@@ -30,8 +30,6 @@ public class ScanerFileName {
             System.out.println("Такого файла еще не существует!Мы создаем его");
             File yourFile = new File(inputFileName);
             yourFile.createNewFile();
-            System.out.println(getFileExtension(inputFileName));
-            FileOutputStream oFile = new FileOutputStream(inputFileName, false);
 
         }
 
@@ -46,7 +44,7 @@ public class ScanerFileName {
             // то вырезаем все знаки после последней точки в названии файла, то есть ХХХХХ.txt -> txt
             return inputFileName.substring(inputFileName.lastIndexOf(".")+1);
             // в противном случае возвращаем заглушку, то есть расширение не найдено
-        else return "";
+        else return "Неверно";
     }
     public void choiseWay(String getFileExtension){
         switch (getFileExtension){

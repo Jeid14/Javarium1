@@ -7,7 +7,7 @@ import com.company.utils.FileHelper;
 import java.io.IOException;
 import java.util.List;
 
-public class StringFormatExecutor implements Executable{
+public class StringFormatExecutor implements Executable {
 
     private final FileHelper fileHelper = new FileHelper();
     private final IPersonConvertor convertor;
@@ -18,7 +18,7 @@ public class StringFormatExecutor implements Executable{
 
     @Override
     public void write(String fileName, List<Person> personList) throws IOException {
-        fileHelper.saveToFile(convertor.convertPersonToStr(personList),fileName);
+        fileHelper.saveToFile(convertor.convertPersonToStr(personList), fileName);
     }
 
     @Override
@@ -27,12 +27,12 @@ public class StringFormatExecutor implements Executable{
     }
 
     @Override
-    public boolean update(String fileName, List<Person> person) {
-        return false;
+    public void update(String fileName, List<Person> personList) throws IOException {
+        fileHelper.updateFile(convertor.convertPersonToStr(personList), fileName);
     }
 
     @Override
-    public boolean delete(String fileName, int id) {
-        return false;
+    public void delete(String fileName) {
+
     }
 }
