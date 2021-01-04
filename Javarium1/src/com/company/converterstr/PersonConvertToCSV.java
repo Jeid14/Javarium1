@@ -2,6 +2,7 @@ package com.company.converterstr;
 
 import com.company.model.Person;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvParser;
@@ -17,6 +18,7 @@ public class PersonConvertToCSV implements IPersonConvertor {
     final CsvMapper mapper = new CsvMapper();
     final CsvSchema schema = mapper.schemaFor(Person.class);
 
+
     @Override
     public String convertPersonToStr(List<Person> personList) {
         try {
@@ -28,16 +30,11 @@ public class PersonConvertToCSV implements IPersonConvertor {
     }
 
     @Override
-    public List<Person> convertStrToPerson(String personStr) {
-        List<Person> users = new ArrayList<>();
+    public List<Person> convertStrToPerson(String personStr) throws JsonProcessingException {
         mapper.enable(CsvParser.Feature.WRAP_AS_ARRAY);
-        MappingIterator<List<String>> rows = null;
-        try {
-            users.add(mapper.readValue(personStr, Person.class));
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-        return users;
+            return mapper.readValue(personStr, new TypeReference<List<Person>>() {
+            });
+
 
 
     }

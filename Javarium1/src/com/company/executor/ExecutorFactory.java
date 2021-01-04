@@ -24,8 +24,6 @@ public class ExecutorFactory {
                 result = xmlExecutable;
                 break;
             case Constants.FORMAT_YML:
-                result = ymlExecutable;
-                break;
             case Constants.FORMAT_YAML:
                 result = ymlExecutable;
                 break;

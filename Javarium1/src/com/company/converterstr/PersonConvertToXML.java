@@ -2,6 +2,8 @@ package com.company.converterstr;
 
 import com.company.model.Person;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import javax.xml.bind.JAXB;
@@ -18,6 +20,7 @@ import java.util.List;
 
 public class PersonConvertToXML implements IPersonConvertor {
     private final XmlMapper mapper = new XmlMapper();
+    private final TypeReference<List<Person>> typeReference = new TypeReference<List<Person>>(){};
 
 
     @Override
@@ -32,18 +35,10 @@ public class PersonConvertToXML implements IPersonConvertor {
     }
 
     @Override
-    public List<Person> convertStrToPerson(String personStr) {
-        List<Person> newPerson = new ArrayList<Person>();
-        try {
-            Person person = mapper.readValue(personStr, Person.class);
+    public List<Person> convertStrToPerson(String personStr) throws JsonProcessingException {
+        return mapper.readValue(personStr, new TypeReference<List<Person>>() {
+        });
 
-            newPerson.add(person);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-
-
-        return newPerson;
     }
 
 }

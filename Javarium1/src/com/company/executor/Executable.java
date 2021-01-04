@@ -11,7 +11,7 @@ public interface Executable {
 
     List<Person> read(String fileName) throws IOException;
 
-    void update(String fileName, List<Person> person) throws IOException;
+    void update(String fileName) throws IOException;
 
-    void delete(String fileName);
+    void delete(String fileName) throws IOException;
 }

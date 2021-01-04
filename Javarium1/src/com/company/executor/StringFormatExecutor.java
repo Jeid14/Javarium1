@@ -27,12 +27,15 @@ public class StringFormatExecutor implements Executable {
     }
 
     @Override
-    public void update(String fileName, List<Person> personList) throws IOException {
+    public void update(String fileName) throws IOException {
+        List<Person> personList = read(fileName);
         fileHelper.updateFile(convertor.convertPersonToStr(personList), fileName);
     }
 
     @Override
-    public void delete(String fileName) {
+    public void delete(String fileName) throws IOException {
+        List<Person> personList = read(fileName);
+        fileHelper.deleteFromFile(convertor.convertPersonToStr(personList),fileName);
 
 
     }

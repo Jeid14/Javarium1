@@ -25,4 +25,11 @@ public class ConstantString {
     public final static String START_COMMAND = "После команды Start выполняется сохранение измененных данных.";
     public final static String HELP_COMMAND = "После команды Help осуществляется вывод доступных команд и их формат.";
     public final static String SWITCH_COMMAND = "После команды Switch осуществляется возврат в главное меню";
+
+    public final static String ID = "id";
+
+    public final static String firstName = "First Name";
+    public final static String lastName = "Last Name";
+    public final static String AGE = "Age";
+    private String city;
 }

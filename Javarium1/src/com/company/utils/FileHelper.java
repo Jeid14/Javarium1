@@ -39,8 +39,10 @@ public class FileHelper {
 
     }
 
-    public void deleteFromFile(List<Person> personList, int id, String fileName,String content) throws IOException {
-
+    public void deleteFromFile(String content, String fileName) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
+        writer.write(content);
+        writer.close();
             }
         }
 

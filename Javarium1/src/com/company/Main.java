@@ -17,25 +17,27 @@ public class Main extends Object {
     private Executable executor;
 
     public static void main(String[] args) throws IOException {
-//
-//      ScanerFileName scanerFileName = new ScanerFileName();
-//      FileHelper fileHelper = new FileHelper();
-//
-//        PersonConvertToCSV personConvertToCSV = new PersonConvertToCSV();
-//
-//        Person person1 = new Person(11, "Ann", "Kan", 12, "Kharkiv");
-//        Person person2 = new Person(10, "MAKS", "Fu", 133, "Kiev");
-//        Person person3 = new Person(110, "Jeid", "Osi", 3, "XZ");
-//
-//        List<Person> personList = new ArrayList<>();
-//
-//
-//        personList.add(person1);
-//        personList.add(person2);
-//        personList.add(person3);
-//
-//        System.out.println(scanerFileName.getFileExtension(scanerFileName.getInputFileName()));
 
+
+      ScanerFileName scanerFileName = new ScanerFileName();
+      FileHelper fileHelper = new FileHelper();
+
+        PersonConvertToCSV personConvertToCSV = new PersonConvertToCSV();
+        PersonConvertToXML personConvertToXML = new PersonConvertToXML();
+        PersonConvertYaml personConvertYaml = new PersonConvertYaml();
+
+        Person person1 = new Person(11, "Ann", "Kan", 12, "Kharkiv");
+        Person person2 = new Person(10, "MAKS", "Fu", 133, "Kiev");
+        Person person3 = new Person(110, "Jeid", "Osi", 3, "XZ");
+
+        List<Person> personList = new ArrayList<>();
+
+
+        personList.add(person1);
+        personList.add(person2);
+        personList.add(person3);
+
+      fileHelper
 
 
     }
