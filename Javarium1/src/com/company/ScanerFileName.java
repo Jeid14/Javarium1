@@ -46,18 +46,11 @@ public class ScanerFileName {
             // в противном случае возвращаем заглушку, то есть расширение не найдено
         else return "Неверно";
     }
-    public void choiseWay(String getFileExtension){
-        switch (getFileExtension){
-            case  "YAML": System.out.println("Работаем с ямл");break;
-            case  "json": System.out.println("Работаем с жсон");break;
-            case "XML":
-                System.out.println("Работаем с ХМЛ");break;
-            case "BINARY":
-                System.out.println("Работаем с бинари");
-            default:
-                System.out.println("Huina");
+    public final String fileExtension(){
+        return getFileExtension(getInputFileName());
 
-        }
     }
-}
+
+    }
+
 

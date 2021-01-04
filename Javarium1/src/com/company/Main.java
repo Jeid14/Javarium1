@@ -18,41 +18,30 @@ public class Main extends Object {
 
     public static void main(String[] args) throws IOException {
 //
-      ScanerFileName scanerFileName = new ScanerFileName();
-      FileHelper fileHelper = new FileHelper();
-
-        PersonConvertToCSV personConvertToCSV = new PersonConvertToCSV();
-
-        Person person1 = new Person(11, "Ann", "Kan", 12, "Kharkiv");
-        Person person2 = new Person(10, "MAKS", "Fu", 133, "Kiev");
-        Person person3 = new Person(110, "Jeid", "Osi", 3, "XZ");
-
-        List<Person> personList = new ArrayList<>();
-
-
-        personList.add(person1);
-        personList.add(person2);
-        personList.add(person3);
-
-        personConvertToCSV.convertStrToPerson(fileHelper.readFromFile(scanerFileName.inputFileName));
+//      ScanerFileName scanerFileName = new ScanerFileName();
+//      FileHelper fileHelper = new FileHelper();
+//
+//        PersonConvertToCSV personConvertToCSV = new PersonConvertToCSV();
+//
+//        Person person1 = new Person(11, "Ann", "Kan", 12, "Kharkiv");
+//        Person person2 = new Person(10, "MAKS", "Fu", 133, "Kiev");
+//        Person person3 = new Person(110, "Jeid", "Osi", 3, "XZ");
+//
+//        List<Person> personList = new ArrayList<>();
+//
+//
+//        personList.add(person1);
+//        personList.add(person2);
+//        personList.add(person3);
+//
+//        System.out.println(scanerFileName.getFileExtension(scanerFileName.getInputFileName()));
 
 
 
     }
     
 
-    public static void start() {
-        ScanerFileName scanerFileName = new ScanerFileName();
-        //  scanerFileName.scannerFileNameAndCreateFile();
-        scanerFileName.choiseWay(scanerFileName.getFileExtension(scanerFileName.inputFileName));
-//        } catch (IOException e) {
-//            System.out.println("Что то не так");
-//
 
 
-        ;
-
-
-    }
 }
 

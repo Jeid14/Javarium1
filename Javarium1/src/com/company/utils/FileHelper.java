@@ -40,12 +40,9 @@ public class FileHelper {
     }
 
     public void deleteFromFile(List<Person> personList, int id, String fileName,String content) throws IOException {
-        for (Person person : personList) {
-            if (person.getId() == id) {
-                personList.remove(person);
-                updateFile(content,fileName);
+
             }
         }
 
-    }
-}
+
+

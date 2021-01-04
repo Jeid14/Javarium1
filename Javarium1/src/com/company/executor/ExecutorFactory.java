@@ -1,5 +1,6 @@
 package com.company.executor;
 
+import com.company.converterstr.PersonConvertToCSV;
 import com.company.converterstr.PersonConvertToXML;
 import com.company.converterstr.PersonConvertYaml;
 import com.company.converterstr.PersonConverterJson;
@@ -11,6 +12,7 @@ public class ExecutorFactory {
     private final Executable jsonExecutable = new StringFormatExecutor(new PersonConverterJson());
     private final Executable xmlExecutable = new StringFormatExecutor(new PersonConvertToXML());
     private final Executable ymlExecutable = new StringFormatExecutor(new PersonConvertYaml());
+    private final Executable csvExecutable = new StringFormatExecutor(new PersonConvertToCSV());
 
     public Executable getInstanceByFormat(String format) {
         Executable result;
@@ -23,6 +25,12 @@ public class ExecutorFactory {
                 break;
             case Constants.FORMAT_YML:
                 result = ymlExecutable;
+                break;
+            case Constants.FORMAT_YAML:
+                result = ymlExecutable;
+                break;
+            case Constants.FORMAT_CSV:
+                result = csvExecutable;
                 break;
             default:
                 result = binaryExecutable;

@@ -34,7 +34,7 @@ public class PersonConvertYaml implements IPersonConvertor {
 
     @Override
     public List<Person> convertStrToPerson(String personStr) {
-        List<Person> ts = null;
+        List<Person> ts = new ArrayList<>();
         try {
             ts = mapper.readValue(personStr, listType);
         } catch (JsonProcessingException e) {
