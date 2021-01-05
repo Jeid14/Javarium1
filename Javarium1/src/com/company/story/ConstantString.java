@@ -3,6 +3,7 @@ package com.company.story;
 import com.sun.javafx.binding.StringFormatter;
 
 public class ConstantString {
+    public final static String ENTER_FILE_NAME_COMMAND = "Введите название файла!";
     public final static String WELCOME = "Привет, я программа создающая персон и записываю и удалю их с файла!";
     public final static String ENTER_FILE_NAME = "Введите имя файла с расширением";
     public final static String CREATE = "Create";
@@ -28,8 +29,15 @@ public class ConstantString {
 
     public final static String ID = "id";
 
-    public final static String firstName = "First Name";
-    public final static String lastName = "Last Name";
+    public final static String FIRST_NAME = "First Name";
+    public final static String LAST_NAME = "Last Name";
     public final static String AGE = "Age";
-    private String city;
+    private final static String CITY = "City";
+
+    public static String ENTER_FIRST_NAME = "Enter First Name:";
+    public static String ENTER_LAST_NAME = "Enter  Last Name:";
+    public static String ENTER_CITY = "Enter City:";
+    public static String ENTER_ID = "Enter id:";
+    public static String ENTER_AGE = "Enter age:";
+
 }

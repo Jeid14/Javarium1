@@ -5,7 +5,7 @@ import java.io.*;
 public class ScanerFileName {
 
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); //
-    String inputFileName;
+    static String inputFileName;
 
     {
         try {
@@ -34,11 +34,11 @@ public class ScanerFileName {
         }
 
     }
-    public  final String getInputFileName(){
+    public static final String getInputFileName(){
         return inputFileName;
 
     }
-    public   String getFileExtension(String inputFileName) {
+    public static String getFileExtension(String inputFileName) {
         // если в имени файла есть точка и она не является первым символом в названии файла
         if(inputFileName.lastIndexOf(".") != -1 && inputFileName.lastIndexOf(".") != 0)
             // то вырезаем все знаки после последней точки в названии файла, то есть ХХХХХ.txt -> txt
@@ -46,7 +46,7 @@ public class ScanerFileName {
             // в противном случае возвращаем заглушку, то есть расширение не найдено
         else return "Неверно";
     }
-    public final String fileExtension(){
+    public static final String fileExtension(){
         return getFileExtension(getInputFileName());
 
     }

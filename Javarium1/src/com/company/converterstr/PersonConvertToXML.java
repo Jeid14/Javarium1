@@ -35,7 +35,7 @@ public class PersonConvertToXML implements IPersonConvertor {
     }
 
     @Override
-    public List<Person> convertStrToPerson(String personStr) throws JsonProcessingException {
+    public List<Person> convertStrToPerson(String personStr) throws IOException {
         return mapper.readValue(personStr, new TypeReference<List<Person>>() {
         });
 

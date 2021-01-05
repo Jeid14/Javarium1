@@ -20,7 +20,7 @@ public class Person implements Serializable {
     private String lastName;
     private int age;
     private String city;
-    private List<Person> personList;
+
 
     public void setId(int id) {
         this.id = id;
@@ -42,7 +42,6 @@ public class Person implements Serializable {
         this.city = city;
     }
     public Person(){
-        personList = new ArrayList<Person>();
 
     }
 
@@ -79,16 +78,13 @@ public class Person implements Serializable {
     public String toString() {
         return "{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", city='" + city + '\'' +
-                '}';
+                " firstName='" + firstName + '\'' +
+                " lastName='" + lastName + '\'' +
+                " age=" + age +
+                " city='" + city + '\'' +
+                '}'+
+                '\n';
     }
 
 
-
-    public void add(Person person){
-        personList.add(person);
-    }
 }
