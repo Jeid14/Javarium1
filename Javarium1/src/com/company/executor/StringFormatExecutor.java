@@ -26,17 +26,4 @@ public class StringFormatExecutor implements Executable {
         return convertor.convertStrToPerson(fileHelper.readFromFile(fileName));
     }
 
-    @Override
-    public void update(String fileName) throws IOException {
-        List<Person> personList = read(fileName);
-        fileHelper.updateFile(convertor.convertPersonToStr(personList), fileName);
-    }
-
-    @Override
-    public void delete(String fileName) throws IOException {
-        List<Person> personList = read(fileName);
-        fileHelper.deleteFromFile(convertor.convertPersonToStr(personList),fileName);
-
-
-    }
 }

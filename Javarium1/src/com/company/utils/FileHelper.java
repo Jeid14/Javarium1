@@ -10,7 +10,7 @@ public class FileHelper {
 
 
     public void saveToFile(String content, String fileName) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
         writer.write(content);
         writer.close();
 
@@ -32,19 +32,7 @@ public class FileHelper {
         return outputString.toString();
     }
 
-    public void updateFile(String content, String fileName) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
-        writer.write(content);
-        writer.close();
-
-    }
-
-    public void deleteFromFile(String content, String fileName) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
-        writer.write(content);
-        writer.close();
-            }
-        }
+}
 
 
 

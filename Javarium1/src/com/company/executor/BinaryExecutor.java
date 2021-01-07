@@ -37,14 +37,4 @@ public class BinaryExecutor implements Executable, Serializable {
             return newPerson;
         }
     }
-
-    @Override
-    public void update(String fileName) {
-
-    }
-
-    @Override
-    public void delete(String fileName) {
-
-    }
 }
