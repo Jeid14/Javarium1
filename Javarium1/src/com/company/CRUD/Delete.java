@@ -15,7 +15,6 @@ public class Delete {
     public List<Person> deleteOnePerson(List<Person> personList) throws IOException {
         int count = 0;
         Person personForDelete = new Person();
-        List<Person> newPersons = new ArrayList<>();
         System.out.println(ConstantString.ENTER_ID);
         int id = scanner.nextInt();
 
@@ -28,14 +27,13 @@ public class Delete {
 
         }
         if (count == 0) {
-            System.out.println("Такой персоны нет");
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.doThis(ConstantString.READ);
-            // newPersons = personList;
+            System.out.println("Person not found!");
+
+
         }
         personList.remove(personForDelete);
-        newPersons = personList;
 
-        return newPersons;
+
+        return personList;
     }
 }

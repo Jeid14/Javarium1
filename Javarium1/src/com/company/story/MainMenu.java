@@ -23,7 +23,7 @@ public class MainMenu {
 
     public void mainMenu() throws IOException {
         System.out.println(ConstantString.WELCOME);
-        System.out.println("Для начала введите название файла:");
+        System.out.println(ConstantString.ENTER_FILE_NAME);
         ScanerFileName scanerFileName = new ScanerFileName();
         fileName = scanerFileName.getInputFileName();
         fileExtension = scanerFileName.getFileExtension();
@@ -55,7 +55,7 @@ public class MainMenu {
                 case ConstantString.CREATE:
                     Create create = new Create();
                     newPersons = create.createPerson(personList);
-                    System.out.println("Создание успешно!");
+                    System.out.println("Creation successful!");
 
                     fourCommand();
                     doThis(scanner.nextLine());
@@ -65,14 +65,14 @@ public class MainMenu {
                     int id = scanner.nextInt();
                     Update update = new Update();
                     newPersons = update.updatePerson(personList, id);
-                    System.out.println("Обновление успешно!");
+                    System.out.println("Update successful!");
                     fourCommand();
                     doThis(scanner.nextLine());
                     break;
                 case ConstantString.DELETE:
                     Delete delete = new Delete();
                     newPersons = delete.deleteOnePerson(personList);
-                    System.out.println("Удаление успешно!");
+                    System.out.println("Removal successful!");
                     fourCommand();
                     doThis(scanner.nextLine());
                     break;
@@ -82,18 +82,18 @@ public class MainMenu {
                     doThis(scanner.nextLine());
                     break;
                 case ConstantString.SWITCH:
-                    System.out.println("Введите имя название нового файлаЖ");
+                    System.out.println(ConstantString.ENTER_FILE_NAME);
                     fileName = scanner.nextLine();
-                    System.out.println("Вы уверены");
-                    System.out.println("Введите еще раз имя файла на который хотите изменить:");
+                    System.out.println("Are you sure?");
+                    System.out.println("Enter the file name again to change it!");
                     fileExtension = new ScanerFileName().getFileExtension(fileName);
 
-                System.out.println("Теперь мы работаем с " + fileName);
+                System.out.println("Now working with " + fileName);
                     fourCommand();
                     doThis(scanner.nextLine());
                     break;
                 default:
-                    System.out.println("Неправилься команда, попробуйте еще раз!");
+                    System.out.println("Wrong command, try again!");
                     doThis(scanner.nextLine());
                     break;
 
@@ -104,19 +104,18 @@ public class MainMenu {
 
 
     public void fourCommand() throws IOException {
-        System.out.println("Доступны 4 команды:");
         System.out.println(ConstantString.CREATE.toUpperCase(Locale.ROOT) + "      " + ConstantString.UPDATE.toUpperCase(Locale.ROOT) + "      " + ConstantString.DELETE.toUpperCase(Locale.ROOT) + "      " + ConstantString.READ.toUpperCase(Locale.ROOT));
 
-        System.out.println(ConstantString.CREATE_COMMAND);
-        System.out.println(ConstantString.UPDATE_COMMAND);
-        System.out.println(ConstantString.DELETE_COMMAND);
-        System.out.println(ConstantString.READ_COMMAND);
-        System.out.println("Вводите команду!");
+//        System.out.println(ConstantString.CREATE_COMMAND);
+//        System.out.println(ConstantString.UPDATE_COMMAND);
+//        System.out.println(ConstantString.DELETE_COMMAND);
+//        System.out.println(ConstantString.READ_COMMAND);
+        System.out.println("Enter command!");
     }
 
     public void saveChange() throws IOException {
         new ExecutorFactory().getInstanceByFormat(fileExtension).write(fileName, newPersons);
-        System.out.println("Изменения сохранены!");
+        System.out.println("Changed saved!");
 
 
     }

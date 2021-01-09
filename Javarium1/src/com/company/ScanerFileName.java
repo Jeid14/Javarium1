@@ -27,7 +27,7 @@ public class ScanerFileName {
 //            reader.close();
 
         } catch (IOException e) {
-            System.out.println("Такого файла еще не существует!Мы создаем его");
+            System.out.println("File are not found. Create new!");
             inputFileName = file;
             File yourFile = new File(inputFileName);
             try {
@@ -63,7 +63,7 @@ public class ScanerFileName {
             // то вырезаем все знаки после последней точки в названии файла, то есть ХХХХХ.txt -> txt
             return inputFileName.substring(inputFileName.lastIndexOf(".") + 1);
             // в противном случае возвращаем заглушку, то есть расширение не найдено
-        else return "Неверно";
+        else return " ";
     }
     public void isEmpty(String inputFileName) throws IOException {
         File yourFile = new File(inputFileName);
