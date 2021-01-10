@@ -16,5 +16,6 @@
     <orderEntry type="library" name="com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.3" level="project" />
     <orderEntry type="library" name="com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.12.0" level="project" />
     <orderEntry type="library" name="com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.12.0" level="project" />
+    <orderEntry type="library" name="com.opencsv:opencsv:4.1" level="project" />
   </component>
 </module>

@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface IPersonConvertor {
 
-    String convertPersonToStr(List<Person> personList) throws JsonProcessingException;
+    String convertPersonToStr(List<Person> personList) throws IOException;
     List<Person> convertStrToPerson(String personStr) throws JsonProcessingException, IOException;
 }

@@ -1,19 +1,14 @@
 package com.company.CRUD;
 
 import com.company.model.Person;
-import com.company.story.ConstantString;
-import com.company.story.MainMenu;
+import com.company.utils.ConstantString;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Create {
     Scanner scanner = new Scanner(System.in);
-//    Scanner scanner2 = new Scanner(System.in);
-//    Scanner scanner3 = new Scanner(System.in);
-//    Scanner scanner4 = new Scanner(System.in);
 
 
     public List<Person> createPerson(List<Person> personList) throws IOException {
@@ -25,13 +20,13 @@ public class Create {
             if (p.getId() == person.getId()) {
                 count++;
                 Update update = new Update();
-                update.updatePerson(personList,person.getId());
+                update.updatePerson(personList, person.getId());
 
             }
         }
-        if(count == 0) {
+        if (count == 0) {
             System.out.println(ConstantString.ENTER_FIRST_NAME);
-            person.setFirstName( scanner.next());
+            person.setFirstName(scanner.next());
             System.out.println(ConstantString.ENTER_LAST_NAME);
             person.setLastName(scanner.next());
             System.out.println(ConstantString.ENTER_CITY);

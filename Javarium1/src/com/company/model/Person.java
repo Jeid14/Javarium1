@@ -1,24 +1,24 @@
 package com.company.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.opencsv.bean.CsvBindByPosition;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-// POJO classes
+
 public class Person implements Serializable {
-
-
-
+    @JsonIgnoreProperties(ignoreUnknown=true)
+    @CsvBindByPosition(position = 0)
     private int id;
-
+    @CsvBindByPosition(position = 1)
     private String firstName;
+    @CsvBindByPosition(position = 2)
     private String lastName;
+    @CsvBindByPosition(position = 3)
     private int age;
+    @CsvBindByPosition(position = 4)
     private String city;
 
 

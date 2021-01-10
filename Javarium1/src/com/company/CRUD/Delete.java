@@ -1,11 +1,9 @@
 package com.company.CRUD;
 
 import com.company.model.Person;
-import com.company.story.ConstantString;
-import com.company.story.MainMenu;
+import com.company.utils.ConstantString;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 

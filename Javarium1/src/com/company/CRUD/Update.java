@@ -1,8 +1,7 @@
 package com.company.CRUD;
 
-import com.company.CRUD.Create;
 import com.company.model.Person;
-import com.company.story.ConstantString;
+import com.company.utils.ConstantString;
 
 import java.io.IOException;
 import java.util.List;
@@ -27,6 +26,7 @@ public class Update {
                     p.setAge(scanner.nextInt());
                     count++;
                 } }else if (count <= 0) {
+//
                     System.out.println("Person is not found!");
                 }
             }

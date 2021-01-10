@@ -20,7 +20,8 @@ import java.util.List;
 
 public class PersonConvertToXML implements IPersonConvertor {
     private final XmlMapper mapper = new XmlMapper();
-    private final TypeReference<List<Person>> typeReference = new TypeReference<List<Person>>(){};
+    private final TypeReference<List<Person>> typeReference = new TypeReference<List<Person>>() {
+    };
 
 
     @Override

@@ -1,17 +1,23 @@
 package com.company.story;
 
 import com.company.CRUD.Delete;
-import com.company.ScanerFileName;
+import com.company.utils.ConstantString;
+import com.company.utils.FileHelper;
+import com.company.utils.ScanerFileName;
 import com.company.executor.ExecutorFactory;
 import com.company.CRUD.Create;
 import com.company.model.Person;
 import com.company.CRUD.Update;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+
+import static com.company.utils.ScanerFileName.getFileExtension;
+import static com.company.utils.ScanerFileName.getInputFileName;
 
 public class MainMenu {
 
@@ -25,9 +31,10 @@ public class MainMenu {
         System.out.println(ConstantString.WELCOME);
         System.out.println(ConstantString.ENTER_FILE_NAME);
         ScanerFileName scanerFileName = new ScanerFileName();
-        fileName = scanerFileName.getInputFileName();
-        fileExtension = scanerFileName.getFileExtension();
-        scanerFileName.isEmpty(fileName);
+        fileName = getInputFileName();
+        fileExtension = getFileExtension();
+        isEmpty(fileName);
+        System.out.println(fileName);
 
 
         fourCommand();
@@ -86,12 +93,28 @@ public class MainMenu {
                     fileName = scanner.nextLine();
                     System.out.println("Are you sure?");
                     System.out.println("Enter the file name again to change it!");
-                    fileExtension = new ScanerFileName().getFileExtension(fileName);
+                    ScanerFileName scanerFileName = new ScanerFileName();
+                    fileExtension = getFileExtension(fileName);
+                    isEmpty(fileName);
 
-                System.out.println("Now working with " + fileName);
+                    System.out.println("Now working with " + fileName);
                     fourCommand();
                     doThis(scanner.nextLine());
                     break;
+                case ConstantString.HELP:
+                    System.out.println(ConstantString.CREATE.toUpperCase(Locale.ROOT) + "      " + ConstantString.UPDATE.toUpperCase(Locale.ROOT) + "      " + ConstantString.DELETE.toUpperCase(Locale.ROOT) + "      " + ConstantString.READ.toUpperCase(Locale.ROOT) + "      " + ConstantString.SWITCH.toUpperCase(Locale.ROOT) + "      " + ConstantString.HELP.toUpperCase(Locale.ROOT) + "      " + ConstantString.EXIT.toUpperCase(Locale.ROOT));
+
+                    System.out.println(ConstantString.CREATE_COMMAND);
+                    System.out.println(ConstantString.READ_COMMAND);
+                    System.out.println(ConstantString.UPDATE_COMMAND);
+                    System.out.println(ConstantString.DELETE_COMMAND);
+                    System.out.println(ConstantString.START_COMMAND);
+
+                    System.out.println(ConstantString.HELP_COMMAND);
+                    System.out.println(ConstantString.SWITCH_COMMAND);
+                    System.out.println(ConstantString.EXIT_COMMAND);
+                    break;
+
                 default:
                     System.out.println("Wrong command, try again!");
                     doThis(scanner.nextLine());
@@ -102,14 +125,8 @@ public class MainMenu {
     }
 
 
-
     public void fourCommand() throws IOException {
-        System.out.println(ConstantString.CREATE.toUpperCase(Locale.ROOT) + "      " + ConstantString.UPDATE.toUpperCase(Locale.ROOT) + "      " + ConstantString.DELETE.toUpperCase(Locale.ROOT) + "      " + ConstantString.READ.toUpperCase(Locale.ROOT));
-
-//        System.out.println(ConstantString.CREATE_COMMAND);
-//        System.out.println(ConstantString.UPDATE_COMMAND);
-//        System.out.println(ConstantString.DELETE_COMMAND);
-//        System.out.println(ConstantString.READ_COMMAND);
+        System.out.println(ConstantString.CREATE.toUpperCase(Locale.ROOT) + "      " + ConstantString.UPDATE.toUpperCase(Locale.ROOT) + "      " + ConstantString.DELETE.toUpperCase(Locale.ROOT) + "      " + ConstantString.READ.toUpperCase(Locale.ROOT) + "      " + ConstantString.SWITCH.toUpperCase(Locale.ROOT) + "      " + ConstantString.HELP.toUpperCase(Locale.ROOT) + "      " + ConstantString.EXIT.toUpperCase(Locale.ROOT));
         System.out.println("Enter command!");
     }
 
@@ -120,5 +137,17 @@ public class MainMenu {
 
     }
 
+    public void isEmpty(String inputFileName) throws IOException {
+        File yourFile = new File(inputFileName);
+        if (yourFile.length() == 0) {
+            Person person = new Person(0, " ", " ", 0, " ");
+            List<Person> personList = new ArrayList<>();
+            personList.add(person);
+            FileHelper fileHelper = new FileHelper();
+            new ExecutorFactory().getInstanceByFormat(getFileExtension()).write(getInputFileName(), personList);
+        }
+
+    }
 
 }
+
