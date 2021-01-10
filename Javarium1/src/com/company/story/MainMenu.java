@@ -113,6 +113,7 @@ public class MainMenu {
                     System.out.println(ConstantString.HELP_COMMAND);
                     System.out.println(ConstantString.SWITCH_COMMAND);
                     System.out.println(ConstantString.EXIT_COMMAND);
+                    doThis(scanner.nextLine());
                     break;
 
                 default:
