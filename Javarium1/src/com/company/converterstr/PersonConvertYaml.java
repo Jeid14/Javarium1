@@ -19,7 +19,6 @@ public class PersonConvertYaml implements IPersonConvertor {
 
     public PersonConvertYaml() {
         mapper = new ObjectMapper(new YAMLFactory());
-        //mapper.findAndRegisterModules();
     }
 
     @Override

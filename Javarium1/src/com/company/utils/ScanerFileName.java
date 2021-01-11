@@ -1,13 +1,6 @@
 package com.company.utils;
 
-import com.company.CRUD.Create;
-import com.company.executor.ExecutorFactory;
-import com.company.model.Person;
-import com.company.utils.FileHelper;
-
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ScanerFileName {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); //

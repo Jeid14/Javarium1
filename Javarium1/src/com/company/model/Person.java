@@ -2,7 +2,6 @@ package com.company.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.opencsv.bean.CsvBindByPosition;
 
 import java.io.Serializable;

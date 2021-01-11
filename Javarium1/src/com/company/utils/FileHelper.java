@@ -1,10 +1,6 @@
 package com.company.utils;
 
-import com.company.model.Person;
-import javafx.beans.binding.StringBinding;
-
 import java.io.*;
-import java.util.List;
 
 public class FileHelper {
 

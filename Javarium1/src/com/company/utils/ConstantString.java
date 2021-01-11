@@ -1,7 +1,5 @@
 package com.company.utils;
 
-import com.sun.javafx.binding.StringFormatter;
-
 import java.util.Locale;
 
 public class ConstantString {
